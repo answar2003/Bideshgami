@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
+
 
 class CountrySelectionView extends StatefulWidget {
   const CountrySelectionView({super.key});
@@ -117,6 +119,7 @@ class _CountrySelectionViewState extends State<CountrySelectionView> {
               ElevatedButton(
                 onPressed: () {
                   if (selectedCountries.length <= 5) {
+                    Get.toNamed(Routes.JOBSELECTION);
                   } else {
                     Get.snackbar(
                       "Selection Error",
